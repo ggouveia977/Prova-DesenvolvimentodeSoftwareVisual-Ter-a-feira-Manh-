@@ -1,0 +1,29 @@
+### Listar as folhas
+GET https://localhost:5001/api/folha/listar
+
+
+### Cadastrar uma folha
+POST https://localhost:5001/api/folha/cadastrar
+Content-Type: application/json
+
+{
+    "folhaid" : 1,
+    "valorhora" : 50,
+    "quantidadehoras" : 100,
+    "salariobruto" : 5000,
+    "impostorenda" : 505.64,
+    "impostoinss" : 550.00,
+    "impostofgts" : 400,
+    "salarioliquido" : 3944.36,
+    "funcionario" : {
+        "funcionarioid" : 1,
+        "nome" : "Diogo",
+        "cpf" : "12312312312",
+        "nascimento" : "01/10/2022",
+        "criadoem" : "01/10/2022"
+    }
+}
+### Buscar um folha por {cpf}/{mês}/{ano}
+GET https://localhost:5001/api/folha/buscar/{cpf}/{mês}/{ano}
+
+GET https://localhost:5001/api/folha/filtrar/{mês}/{ano}
